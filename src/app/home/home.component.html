@@ -1,0 +1,77 @@
+<div id="container">
+
+<div class="card" style="width: 15rem;" *ngFor="let item of myList">
+  <img class="card-img-top" src="../../assets/noImg.png">
+  <div class="card-body">
+    <div class="row">
+        <h5 class="card-title">{{item[1].name}}</h5>
+    </div>
+    <div class="row">
+      <h6>المحافظة: </h6> <h6>{{item[1].province}}</h6>
+    </div>
+    <div class="row">
+      <h6>المنطقة: </h6> <h6>{{item[1].zone}}</h6>
+    </div>
+    <!-- Button trigger modal -->
+<button type="button" (click)='moreDetails(item[1])' class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    استعراض
+  </button>
+
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">معلومات عن الصيدلية</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="{{userData.img}}" style="width: 100%; margin-bottom: 20px;">
+            <div class="row">
+              <div class="col-3">
+                  <h6>الاسم:</h6>
+              </div>
+              <div class="col">
+                  <h5>{{userData.name}}</h5>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h6>المحافظة:</h6>
+                </div>
+                <div class="col">
+                    <h5>{{userData.province}}</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h6>المنطقة:</h6>
+                </div>
+                <div class="col">
+                    <h5>{{userData.zone}}</h5>
+                </div>
+            </div>
+
+             
+            
+             
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+          <button type="button" class="btn btn-primary">انشاء الحساب</button>
+          <button type="button" class="btn btn-danger">حذف الطلب</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

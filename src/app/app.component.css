@@ -1,0 +1,6 @@
+app-side-bar{
+    position: fixed;
+    top: 0px; right: 0px;
+    height: 100vh; width: 18%;
+    background-color: #eeeeee
+}
