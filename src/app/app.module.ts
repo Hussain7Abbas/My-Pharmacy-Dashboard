@@ -7,7 +7,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 // Link betwen firebase and the project
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
-import { AngularFireDatabaseModule } from 'angularfire2/database'; 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [

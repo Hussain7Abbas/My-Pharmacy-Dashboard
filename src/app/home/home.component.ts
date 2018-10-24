@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from "angularfire2/database";
-import { userDataModel } from "../../models/model";
+import { UserDataModel } from "../../models/model";
 
 @Component({
   selector: 'app-home',
@@ -26,9 +26,12 @@ export class HomeComponent implements OnInit {
   }
 
   getData(){
-    this.db.list('/userData').snapshotChanges().subscribe(action=>{
-      for (let i = 0; i < action.length; i++) {
-        this.myList.push([action[i].key ,action[i].payload.val()])
+    this.db.list('/userData').query.orderByChild('userType').equalTo('pharmacy').once('value', action=>{
+      for (let key in action.val()) {
+        this.myList.push([
+          key,
+          action.val()[key] as UserDataModel
+        ])
       }
     })
   }

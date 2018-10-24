@@ -4,10 +4,11 @@
 }
 
 #container{
-    background-image: url('../../assets/mountains.png');
+    background-image: url('../../assets/mountains.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+    color: white;
 }
 
 #logo{

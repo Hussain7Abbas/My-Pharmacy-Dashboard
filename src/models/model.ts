@@ -1,26 +1,43 @@
-export interface userDataModel {
+export interface UserDataModel {
     uid: any;
-    name: string;
-    province: string;
-    zone: string;
-    userType: string;
-    pharmacyReplyNo: string;
-    pharmacyAdress: string;
+    name: String;
+    province: String;
+    zone: String;
+    userType: String;
+    pharmacyReplyNo: String;
+    pharmacyAdress: String;
+}
+
+export interface pharmacyList {
+    uid: String;
+}
+
+
+export interface contactUs {
+    message: String;
+    info: String;
+}
+
+export interface notifi {
+    title: String;
+    body: String;
+    key: String;
+    isRead: Boolean;
 }
 
 export interface postModel {
-    name: string;
-    uidUser: string;
-    postBody: string;
-    postImg: string;
-    postDate: string;
+    name: String;
+    uidUser: String;
+    postBody: String;
+    postImg: String;
+    postDate: String;
     comments: Array<replyModel>;
 }
 
 export interface replyModel {
-    pharmacyName: string;
-    pharmacyUid: any;
-    date: string;
-    price: string;
-    details: string;
+    pharmacyName: String;
+    pharmacyKey: any;
+    date: String;
+    price: String;
+    details: String;
 }

@@ -6,6 +6,8 @@
     margin-right: 20px;
     margin-top: 20px;
     float: right;
+    border: dashed 2px #339999;
+    border-radius: 30px;
 }
 
 .card-img-top{
@@ -18,4 +20,15 @@
 ,.modal-body h5
 ,.modal-footer{
     float: right;
+}
+
+#browseBtn{
+    background-color: #46b4b4;
+    font-weight: bold;
+}
+
+.text-center{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
 }

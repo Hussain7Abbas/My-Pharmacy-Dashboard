@@ -1,0 +1,12 @@
+#container{
+    margin-right: 21%;
+}
+
+.card{
+    margin-right: 2%;
+    width: 45%;
+    margin-top: 2%;
+    float: right;
+    border: dashed 2px #339999;
+    border-radius: 30px;
+}
